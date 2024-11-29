@@ -8,13 +8,12 @@ INC_DIR = .
 SRC = $(wildcard $(SRC_DIR)/*.cpp)
 OBJ = $(SRC:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
 INC = $(wildcard $(INC_DIR)/*.hpp) $(wildcard $(INC_DIR)/*.h)
-EXE = ex02
+EXE = ScavTrap
 
 all: $(EXE)
 
 $(EXE): $(OBJ) $(INC)
 	$(CC) $(CFLAGS) -I$(INC_DIR) $(OBJ) -o $(EXE)
-
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp $(INC)
 	@mkdir -p $(OBJ_DIR)
