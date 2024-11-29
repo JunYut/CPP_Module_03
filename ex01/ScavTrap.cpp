@@ -6,23 +6,28 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 10:49:47 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/11/29 12:45:36 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/11/29 13:05:19 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "ScavTrap.hpp"
 
+using std::cout;
+using std::endl;
+using std::string;
+
 ScavTrap::ScavTrap()
 {
-	std::cout << "ScavTrap default constructor" << std::endl;
+	cout << "ScavTrap default constructor" << endl;
+	_name = "scava trappa";
 	_hitPoints = 100;
 	_energyPoints = 50;
 	_attackDamage = 20;
 }
 
-ScavTrap::ScavTrap(std::string name)
+ScavTrap::ScavTrap(string name)
 {
-	std::cout << "ScavTrap constructor with name" << std::endl;
+	cout << "ScavTrap constructor with name" << endl;
 	_name = name;
 	_hitPoints = 100;
 	_energyPoints = 50;
@@ -31,7 +36,7 @@ ScavTrap::ScavTrap(std::string name)
 
 ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other)
 {
-	std::cout << "ScavTrap copy constructor" << std::endl;
+	cout << "ScavTrap copy constructor" << endl;
 	_name = other._name;
 	_hitPoints = other._hitPoints;
 	_energyPoints = other._energyPoints;
@@ -40,12 +45,12 @@ ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other)
 
 ScavTrap::~ScavTrap()
 {
-	std::cout << "ScavTrap destructor" << std::endl;
+	cout << "ScavTrap destructor" << endl;
 }
 
 ScavTrap &ScavTrap::operator = (const ScavTrap &other)
 {
-	std::cout << "ScavTrap assignation operator" << std::endl;
+	cout << "ScavTrap assignation operator" << endl;
 	_name = other._name;
 	_hitPoints = other._hitPoints;
 	_energyPoints = other._energyPoints;
@@ -55,5 +60,5 @@ ScavTrap &ScavTrap::operator = (const ScavTrap &other)
 
 void	ScavTrap::guardGate()
 {
-	std::cout << "ScavTrap " << _name << " has entered in Gate keeper mode" << std::endl;
+	cout << "ScavTrap " << _name << " has entered in Gate keeper mode" << endl;
 }
