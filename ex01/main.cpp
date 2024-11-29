@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 09:27:31 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/11/29 12:50:01 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/11/29 13:11:30 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,5 +74,11 @@ int main(void)
 		ScavTrap scavtrap;
 		for (int i = 0; i < 20; i++)
 			scavtrap.attack("target 1");
+	}
+	cout << endl;
+	{
+		cout << "-----guardGate-----" << endl;
+		ScavTrap scavtrap;
+		scavtrap.guardGate();
 	}
 }
