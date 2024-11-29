@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 12:58:06 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/11/29 13:10:27 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/11/29 14:35:34 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,9 @@ using std::cout;
 using std::endl;
 using std::string;
 
-FragTrap::FragTrap()
+FragTrap::FragTrap() : ClapTrap("fragga trappa")
 {
 	cout << "FragTrap default constructor" << endl;
-	_name = "fragga trappa";
 	_hitPoints = 100;
 	_energyPoints = 100;
 	_attackDamage = 30;
